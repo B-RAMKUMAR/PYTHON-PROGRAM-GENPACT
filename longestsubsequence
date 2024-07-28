@@ -1,0 +1,27 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Try programiz.pro")
+def lon(a):
+    c=[]
+    for i in range(len(a)):
+        t=a[i]
+        d=[]
+        d.append(t)
+        for j in range(i+1,len(a)):
+            if(t<a[j]):
+                
+                d.append(a[j])
+                t=a[j]
+            else:
+                if(len(d)>1):
+                   c.extend([d])
+                
+                t=a[i]
+                if(t<a[j]):
+                    d=[a[i],a[j]]
+                    t=a[j]
+                else:
+                     d=[a[i]]
+    print(max(c,key=len))
+print(lon([10,9,2,5,3,7,101,18]))
+
